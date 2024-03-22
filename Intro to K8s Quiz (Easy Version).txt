@@ -1,0 +1,67 @@
+Intro to K8s Quiz (Easy Version)
+
+---------------------------------------------------------
+
+1. Which company originally developed Kuberenetes?
+
+	a. Google
+	b. Docker
+	c. Amazon
+	d. Microsoft
+
+2. What is Kubernetes?
+
+	a. Orchestraction tool for managing cluster based containerized application.
+	b. Application used in development mobile Application
+	c. Provides Cloud Storage with AWS
+	d. IDE for developing applications
+
+3. Can Kubernetes manage containerized applications?
+	
+	a. Yes
+	b. No
+
+4. Which of these are the features of Kubernetes? (select one or more)
+	
+	a. Automated rollouts and rollbacks
+	b. Horizontal Scaling
+	c. graceful migration
+	d. All of the Above
+
+5. Which tool can be used to create a local cluster with a single node?
+
+	a. Docker
+	b. kubeadm
+	c. minikube
+	d. Ansible
+
+6. Which of these is not a part of kubernetes?
+	
+	a. Deployments
+	b. Pods
+	c. ReplicaSet
+	d. None of the Above
+
+7. Kubernetes can run on Physical Machines. Is this statement true or false.
+
+	a. True
+	b. False 
+
+8. Is Kubernetes architecture-dependent tool?
+
+	a. Yes
+	b. No
+
+9. Does Kubernetes support Docker Engine as Container Runtime?
+
+	a. Yes
+	b. No
+
+10. Which of these is not a tool used in Kubernetes User?
+
+	a. kubeadm
+	b. kubectl
+	c. container runtime
+	d. Integrated Development Environment
+
+
