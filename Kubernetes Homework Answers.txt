@@ -1,0 +1,69 @@
+Kubernetes Homework Answers:
+
+----------------------------------------------------------
+
+1. Write a short note on Kubernetes.
+
+Kubernetes also referred to as K8s is a container orchestration tool used for managing containerized applications in deployments. It automates many manual traditional tasks and comes with features like automatic scaling and load balancing, self-healing, health and readiness checks for containers, efficient resource utilization etc. It works on a Master-Slave Architecture where a set of nodes work as a control plane which manages resources, network and enforces policies and health checks on worker nodes which are used for running pods, deployments and replicaSet.
+
+Read More on this: https://kubernetes.io/docs/concepts/
+
+
+2. Which tool can be used to deploy a Kubernetes Cluster on a single node?
+
+Minikube can be used to start a local cluster on a single node with limited resources. It is great tool to getting started with kubernetes and helps user getting familiar with kubernetes as a platform.
+
+Read More on this: https://minikube.sigs.k8s.io/docs/start/
+
+
+3. How does Kubernetes help in Horizontal Scaling?
+
+Horizontal Scaling a scaling techinque in which the application is scaled over new instances of resources, therefore when all the deployments are working at the highest capacity a new deployment is created for balancing the load on the application resources utilized currently. In contrast, Vertical Scaling leads to a system in which a single node is upgraded with certain resources like RAM, CPU, Disk etc.
+
+Kubernetes uses ReplicaSets and Horizontal Pod AutoScaler for horizontally scaling an application.
+
+Read more about ReplicaSets: https://kubernetes.io/docs/concepts/workloads/controllers/replicaset/
+Read more about Horizontal Pod AutoScaler: https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/
+Read more about Horizontal Scaling: https://www.baeldung.com/cs/scaling-horizontally-vertically
+Read more about Auto Scaling: https://kubernetes.io/docs/concepts/workloads/autoscaling/
+
+
+4. Write a short note on Kubernetes Architecture.
+
+Kubernetes uses Master Slave Architecture where a control plane takes charge of every control related activity like Node management, Pod Management, Deployment Health checks, Node Status, Load Balancing etc. and the worker nodes are used to run deployments and are used to scale applications over their resources.
+
+Read more on this: https://kubernetes.io/docs/concepts/architecture/
+
+5. List a few features of Kubernetes.
+
+Below are the few features of Kubernetes:
+
+a. Load Balancing
+b. Secret & Configuration Management
+c. Automated rollouts and rollbacks
+d. Self-healing
+e. Health & Readiness Checks
+f. Scaling Capabilities
+
+Read more on this: 
+
+https://kubernetes.io/docs/concepts/overview/#why-you-need-kubernetes-and-what-can-it-do
+
+
+6. What are the limitations of Scaling in Kubernetes?
+
+It is important to think about your applications requirements beforehand so that it resources don't get under or over utilized. Mainly we need to think about horizontal and vertical scaling. There are a few limitations of scaling in kubernetes:
+
+a. For a large cluster, One might need to add more CPU and memory limits for each pod for seemless deployments of application as horizontal pod scaling might not be the viable solution. 
+b. If a cluster has limited nodes, then extensive horizontal scaling can put strain on resources if the application requirements exceed a certain level.
+c. It is important to have well defined limitation for CPU, memory and other resources used by pods as otherwise pods can run into CrashLoopBackOff Cycle.
+
+
+Read more on this: https://kubernetes.io/docs/setup/best-practices/cluster-large/
+
+
+
+
+
+
+

@@ -1,0 +1,11 @@
+Kubernetes Homework (Short Answer Questions)
+
+--------------------------------------------------------
+
+1. Write a short note on Kubernetes.
+2. Which tool can be used to deploy a Kubernetes Cluster on a single node?
+3. How does Kubernetes help in Horizontal Scaling?
+4. Write a short note on Kubernetes Architecture.
+5. List a few features of Kubernetes.
+6. What are the limitations of Scaling in Kubernetes?
+
