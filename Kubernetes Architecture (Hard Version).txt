@@ -42,7 +42,7 @@ Kubenetes Architecture
 
 	a. scheduling pods on worker nodes
 	b. maintaining configuration data for the cluster.
-	c. On demand, application scaling
+	c. application scaling
 	d. configuration management for physical servers which run kubernetes
 
 7. What is Kubernetes Object?
@@ -84,7 +84,7 @@ Kubenetes Architecture
 
 	a. used for persisting container data out of the cluster.
 	b. manages network related task for a worker node
-	c. daemon used by API server to communicate with worker node
+	c. daemon on worker node which helps in the communication with the control plane
 	b. helps in creating kubernetes cluster.
 
 13. What does kube-proxy handle? (select any number of choices)
@@ -111,7 +111,7 @@ Kubenetes Architecture
 	a. executes commands on pod containers
 	b. used to handle I/O in API Server
 	c. creates scheduling algorithms for kubernetes
-	d. finds and binds a pod to a suitable node
+	d. finds a suitable node for a pod and binds the pod to that node
 
 17. Which of these handle network configuration for the pod inter-communication?
 
@@ -134,9 +134,24 @@ Kubenetes Architecture
 	c. Both a and b
 	d. None of the above
 	
+20. Which of the following is not a component of worker node?
 
+	a. kubelet
+	b. kube-apiserver
+	c. kube-proxy
+	d. container runtime
 
+21. Which one of these is responsible for cloud related controllers?
 
+	a. cloud-controller-manager
+	b. cloud-manager
+	c. container-cloud-manager
+	d. container runtime manager
 
+22. Which one of these validates data sent for Kubernetes API object while communicating with kube-apiserver?
 
+	a. kube-validator
+	b. kube-apiserver
+	c. validation-handler
+	d. container network interface
 
