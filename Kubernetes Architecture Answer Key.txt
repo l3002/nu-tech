@@ -1,0 +1,94 @@
+Kubernetes Architecture & Component Questionnaire Answers
+
+-----------------------------------------------------------------
+
+
+1. Write a short note on Kubernetes Object.
+
+Kubernetes objects are a way of defining parts of the cluster which the system needs to manage. It includes deployments, pods, replicaSets, policies etc. They define what a cluster would look like and what kind of workload will it maintain.
+
+There are two main components of an Object, spec and state. state contains the current state of the object whereas the spec defines the desired state of the object which the control plane helps the cluster in achieving. 
+
+Read more on this: https://kubernetes.io/docs/concepts/overview/working-with-objects/
+
+2. Describe a Control Plane.
+
+Control Plane is a orchestraction layer which consists of one or more nodes which helps in managing jobs, deployments, pods etc. on nodes which are used for deploying the containers and run workload defined for the cluster. There are several components in Control Plane, a few of them are:
+
+	a) etcd
+	b) Controller Manager
+	c) Scheduler
+	d) API Server
+	e) Cloud Controller Manager
+
+Depending upon the complexity of the cluster a control plane can have several other components which helps in administering, securing and managing workload on a cluster. A few things which are handled by control plane:
+
+	a) Overall health of a cluster.
+	b) Exposes Kubernetes API which facilitates communication between components and users.
+	c) Schedules pods for nodes
+	d) Analyses load on a particular node for pod deployment
+	e) Automates Scaling and Load Balancing.
+	f) Maintains desired state of the cluster.
+
+Control Plane can be configured to do much more and offers overall control over the deployment in kubernetes.
+
+Read more on this : https://kubernetes.io/docs/concepts/overview/components/#control-plane-components
+
+
+3. What is role of API Server in Control Plane?
+
+API Server is a part of Control Plane which exposes the Kubernetes API, This Kubenetes API contains means to communication between components both external and internal. It is responsible for most of the communication between control plane and kubelet (find more about kubelet here [https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/]). It is also responsible for validating any data which has been sent through the endpoints.
+
+Read More on this:
+
+https://kubernetes.io/docs/reference/command-line-tools-reference/kube-apiserver/
+https://kubernetes.io/docs/concepts/overview/kubernetes-api/
+
+4. Describe the role of etcd.
+
+The etcd is a key-value store which stores all the shared configuration data about the cluster in it. It contains data such as current state, desired state, configuration of resources, and runtime data. It communicates with API Server for data manipulation and retrieval.
+
+Read More on this: 
+
+https://kubernetes.io/docs/tasks/administer-cluster/configure-upgrade-etcd/
+https://www.armosec.io/glossary/etcd-kubernetes/
+
+
+5. What are the responsibilities of kube-scheduler in Control Plane?
+
+kube-scheduler is a part of the control plane which is responsible for schedules newly created pod on a suitable node. The kube-scheduler used the metadata about the nodes and pods created on them to make this decision of selecting suitable nodes in the cluster and then binds one of these suitable nodes which scores the highest in the compatablity criteria.
+
+Read more on this: 
+
+https://kubernetes.io/docs/reference/command-line-tools-reference/kube-scheduler/
+https://kubernetes.io/docs/concepts/scheduling-eviction/kube-scheduler/
+
+
+6. Explain the role of kube-controller-manager in detail.
+
+Controllers in kubernetes have a very vital role in changing the state of the cluster by moving them from current state to desired state. They constantly watch all the nodes in the cluster and checks if any of those are having any discrepancies from their desired state and make the appropriate amount of changes in the current state for to reach the desired state. 
+
+kube-controller-manager is a service which bundles all the controllers in a cluster together and maintains the desired state of a cluster at all times.
+
+Read more on this: 
+
+https://kubernetes.io/docs/reference/command-line-tools-reference/kube-controller-manager/
+https://kubernetes.io/docs/concepts/overview/components/
+
+
+7. What does the cloud-controller-manager do?
+
+Kubernetes can work on physical machines, virtual machines and cloud platforms. While working in a cloud based architecture, we need some way of communication between cloud and kubernetes. This communication is handled by cloud-controller-manager. It communicates with the cloud providers API for controlling cloud-related object. This decouples the cloud related controllers from the other type of controllers and defines a sophisticated system for controlling cloud based resources. 
+
+Read more on this:
+
+https://kubernetes.io/docs/concepts/architecture/cloud-controller/
+https://kubernetes.io/docs/concepts/architecture/controller/
+
+8. What do you mean by worker node or slave?
+
+A Worker node is any node on the cluster on which the actual workload runs. They must contain kubelet for communicating with the control plane. 
+
+
+
+
