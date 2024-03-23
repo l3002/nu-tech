@@ -9,7 +9,12 @@ Kubernetes Architecture & Component Questionnaire
 5. What are the responsibilities of kubernetes scheduler in Control Plane?
 6. Explain the role of kube-controller-manager in details.
 7. What does the cloud-controller-manager do?
-
+8. What do you mean by worker node or slave?
+9. What is the role of container runtime?
+10. What are the responsibilities of kubelet?
+11. Explain the role of kube-proxy in detail.
+12. What is the significance of container network interface (cni) plugins?
+13. What is the difference between the container network interface (CNI) and kube-proxy?
 
 
 
