@@ -1,0 +1,15 @@
+Kubernetes Architecture & Component Questionnaire
+
+-----------------------------------------------------
+
+1. Write a short note on Kubernetes Object.
+2. Describe a Control Plane.
+3. What is role of API Server in Control Plane?
+4. Describe the role of etcd.
+5. What are the responsibilities of kubernetes scheduler in Control Plane?
+6. Explain the role of kube-controller-manager in details.
+7. What does the cloud-controller-manager do?
+
+
+
+
