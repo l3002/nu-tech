@@ -1,7 +1,34 @@
+Kubernetes Architecture & Component Quiz Answers
+
+-----------------------------------------------------------------------------
+
+1. (d)
+2. (a)
+3. (e)
+4. (c)
+5. (b)
+6. (d)
+7. (c)
+8. (a)
+9. (b)
+10. (a)
+11. (a)
+12. (c)
+13. (c) & (d)
+14. (a) & (b)
+15. (b)
+16. (d)
+17. (c)
+18. (b)
+19. (c) (technically it should only be running on worker node but as some components of the control plane runs as a container kubelet is required on the  control plane node too)
+20. (b)
+21. (a)
+22. (b)
+
+
 Kubernetes Architecture & Component Questionnaire Answers
 
 -----------------------------------------------------------------
-
 
 1. Write a short note on Kubernetes Object.
 
@@ -87,7 +114,64 @@ https://kubernetes.io/docs/concepts/architecture/controller/
 
 8. What do you mean by worker node or slave?
 
-A Worker node is any node on the cluster on which the actual workload runs. They must contain kubelet for communicating with the control plane. 
+A Worker node is any node on the cluster on which the actual workload runs. They must contain kubelet for communicating with the control plane. It must also contain container runtime to provide underlying functionality for containers. Kubelet works with this container runtimes to execute pods and deployments on the node. In Addition to the above two, the worker node also contains the kube-proxy which is responsible for managing network related routing and redirection from service to pod.
+
+Read more on this:
+
+https://kubernetes.io/docs/concepts/architecture/nodes/
+https://kubernetes.io/docs/concepts/architecture/control-plane-node-communication/
+
+
+9. What is the role of container runtime?
+
+Container runtime provide underlying functionalities for creating and maintaining containers in a host system. They are essential for creating pods as they sit at the lowest level and provide required foundation for creating containers on a node.
+
+Read more on this:
+
+https://kubernetes.io/docs/setup/production-environment/container-runtimes/
+https://github.com/containerd/containerd/blob/main/README.md
+
+
+10. What are the responsibilities of kubelet?
+
+kubelet is a daemon running on the nodes which works as the node agent. It is responsible for dispatching any new pods, registers worker nodes with the API Server and is responsible for managing the pods on the worker nodes end. It play a vital role in control plane and worker node communication.
+
+Read more on this:
+
+https://kubernetes.io/docs/reference/command-line-tools-reference/kubelet/
+https://www.armosec.io/glossary/kubelet/#:~:text=Kubelet%20plays%20an%20essential%20role,a%20Kubernetes%20cluster's%20operational%20stability.
+
+
+11. Explain the role of kube-proxy in detail.
+
+kube-proxy is a network proxy which is responsible the request routing and redirection from service to pods. This also takes responsibility for efficient ip mapping and port forwarding for services and pods. It defines the network rules for forwarding the request from service layer to pod layer.
+
+Read more about this:
+
+https://medium.com/@amroessameldin/kube-proxy-what-is-it-and-how-it-works-6def85d9bc8f
+
+
+12. What is the significance of container network interface (cni) plugins?
+
+Container network interface plugins are responsible for dynamically configuring cluster's network configuration. It is responsible for assigning cluster wide IPs, maintaining communication interfaces between pods etc. It takes care of the inter pod communication network and configures the network in such a way that all the pods can communicate with one and other.
+
+Read more about this:
+
+https://kubernetes.io/docs/concepts/extend-kubernetes/compute-storage-net/network-plugins/#network-plugin-requirements
+https://kubernetes.io/docs/concepts/services-networking/#the-kubernetes-network-model
+https://github.com/containernetworking/cni/blob/main/README.md
+
+
+13. What is the difference between the container network interface (CNI) and kube-proxy?
+
+kube-proxy and container network interfaces, both work with network related tasks but container network interface is actually responsible for providing seemless communication between containers on same or different node, whereas, the kube-proxy layer actually sits between service layer and pod layer and is responsible for service pod communication when a request is sent to the service object.
+
+Read more on this:
+
+https://github.com/containernetworking/cni/blob/main/README.md
+https://kubernetes.io/docs/reference/command-line-tools-reference/kube-proxy/
+https://kubernetes.io/docs/concepts/services-networking/#the-kubernetes-network-model
+https://medium.com/@seifeddinerajhi/kube-proxy-and-cni-the-hidden-components-of-kubernetes-networking-eb30000bf87a#:~:text=Kubernetes%20networking%20is%20powered%20by,running%20containerized%20applications%20on%20Kubernetes.
 
 
 
