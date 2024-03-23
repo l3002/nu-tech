@@ -1,0 +1,142 @@
+Kubenetes Architecture
+
+-------------------------------------------------------
+
+1. What kind of architecture does kubernetes have?
+
+	a. Von Neumann Architecture
+	b. MVC Architecture
+	c. REST Architecture
+	d. Master-Slave Architecture
+
+2. What is a Control Plane?
+
+	a. A layer of node(s) which manages everthing inside a cluster.
+	b. A orchestration tool like kubernetes
+	c. Cloud Service Provider
+	d. Controller used for controlling etcd
+
+3. Which of the following components belong to the Control Plane?
+
+	a. etcd
+	b. kubelet
+	c. kube-apiserver
+	d. kube-controller-manager
+	e. All of the above
+
+4. What is the role of etcd?
+
+	a. creates containers on worker nodes
+	b. provides API for attaching to the pods
+	c. stores cluster data in the form of key-value pairs
+	d. works as an agent between worker node and control plane
+
+5. What is the role of kube-apiserver?
+
+	a. creates deployments from YAML manifests.
+	b. exposes endpoints which helps in communication between components and user.
+	c. helps in creating Java APIs
+	d. used to install kubelet
+
+6. Which of these is not handled by control plane?
+
+	a. scheduling pods on worker nodes
+	b. maintaining configuration data for the cluster.
+	c. On demand, application scaling
+	d. configuration management for physical servers which run kubernetes
+
+7. What is Kubernetes Object?
+
+	a. entities containing configuration related data about virtual machines
+	b. blueprint for creating containers
+	c. persistent entities which describe the desired state of the cluster
+	d. Java objects used for creating applications
+
+8. What can be used to manipulate kubernetes objects handled by a kubernetes system?
+
+	a. Kubenetes API
+	b. Java Libraries
+	c. Python packages
+	d. Kube proxy
+
+9. What is a Controller in Kubernetes?
+
+	a. a component which maintains control related data of clusters.
+	b. a component which watches and regulates the object states in a cluster.
+	c. a component responsible for controlling scheduling based tasks.
+	d. control plane is also known as controller
+
+10. What is the job of kube-controller-manager?
+
+	a. manages all the controllers defined for a cluster.
+	b. maintains all the master nodes in a cluster.
+	c. exposes functions for creating pods in a deployment.
+	d. exposes functions to create services in a deployments.
+
+11. What does the cloud-controller-manager do?
+
+	a. maintains controller related to cloud providers.
+	b. maintains cloud providers for a cluster.
+	c. creates a configuration for cloud based services
+	d. selects controls for cloud provider
+
+12. What is kubelet?
+
+	a. used for persisting container data out of the cluster.
+	b. manages network related task for a worker node
+	c. daemon used by API server to communicate with worker node
+	b. helps in creating kubernetes cluster.
+
+13. What does kube-proxy handle? (select any number of choices)
+
+	a. maintains networking nodes
+	b. configures network between pods
+	c. enables communication between services and pods.
+	d. assists in port forwarding from services to pods
+
+14. What is the role of container runtime? (select any two)
+
+	a. reponsible for providing an environment for container execution.
+	b. facilitates containerization at the lowest level.
+	c. configures container network
+	d. command used for creating container images
+
+15. Does the controller directly communicate with the kubelet?
+
+	a. Yes
+	b. No
+
+16. What is the role of kube-scheduler?
+
+	a. executes commands on pod containers
+	b. used to handle I/O in API Server
+	c. creates scheduling algorithms for kubernetes
+	d. finds and binds a pod to a suitable node
+
+17. Which of these handle network configuration for the pod inter-communication?
+
+	a. Host
+	b. Control Plane
+	c. cni-plugin
+	d. kube-proxy
+
+18. What is a CRI?
+
+	a. Container Runtime used for creating containers
+	b. A specification for container runtimes for integration with kubelet
+	c. kubelet sub-process which manages multiple container runtimes on a single node.
+	d. initializes kubelet on worker nodes
+
+19. Where does the kubelet runs?
+
+	a. Worker node
+	b. Control Plane
+	c. Both a and b
+	d. None of the above
+	
+
+
+
+
+
+
