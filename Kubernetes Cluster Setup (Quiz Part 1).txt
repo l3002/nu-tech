@@ -1,0 +1,155 @@
+Kubernetes Cluster Setup (Quiz) (Part 1)
+
+---------------------------------------------------
+
+1. Does kubernetes come pre-installed on linux based OS?
+
+	a. Yes
+	b. No
+
+2. How much amount of RAM is required for each node for setting up a cluster with kubeadm?
+
+	a. 2 GiB RAM
+	b. 4 GiB RAM
+	c. 1 GiB RAM
+	d. 8 GiB RAM
+
+3. What is the minimum CPU core requirements for cluster master node?
+
+	a. 4 CPU
+	b. 2 CPU
+	c. 6 CPU
+	d. 1 CPU
+
+4. Which one of the following commands can be used to initialize a cluster?
+
+	a. kubectl
+	b. kubelet
+	c. kubeadm
+	d. kube-apiserver
+
+5. Which one of these commands is used to setup a kubenetes cluster node?
+
+	a. kubeadm init
+	b. kubeadm upgrade
+	c. kubeadm join
+	d. kubeadm kubeconfig
+
+6. Which of these command is used to join the a node to an existing cluster?
+
+	a. kubeadm init
+	b. kubeadm upgrade
+	c. kubeadm token
+	d. kubeadm join
+
+7. What needs to be turned off before starting kubelet?
+
+	a. containerd service
+	b. dockerd service
+	c. swap
+	d. etcd
+
+8. Which of the below commands is used to turn off the swap in linux?
+
+	a. turndown swap
+	b. swapoff -a
+	c. swap down
+	d. swap tdown -a
+
+9. Why is it important to turn off swap while running kubelet?
+
+	a. In order to ensure proper functioning of kubelet with regards to memory utilization
+	b. In order to disable memory usage by kubelet
+	c. In order to create pods swap must be disabled
+	d. as kubelet adds it's own swap memory and before that all the other swaps needs to be disabled
+
+10. What could be the reason if the kubelet service is not starting in a given server? (select any number of options)
+
+	a. containerd is running on the system which leads to kubelet's failure
+	b. swap memory might be turned on
+	c. firewall is not running
+	d. configuration is not provided to kubelet
+
+11. What would you do if kubeadm init fails due to error "port 6643 already in use"?
+
+	a. kill the existing process which is using 6643
+	b. start a new process for adding ports to cluster
+	c. create a new virtual machine
+	d. reinstall the container runtime
+
+12. Which process in control plane component uses the port 6643?
+
+	a. etcd
+	b. kubelet
+	c. api-server
+	d. kube-controller-manager
+
+13. Which of these container runtime is supported by kubernetes? (choose any number of options)
+
+	a. containerd
+	b. CRI-O
+	c. sscontainers
+	d. Docker Engine
+
+14. What could be the reason behind failure of `kubeadm init` command?
+
+	a. kubelet service not running
+	b. container runtime is not installed
+	c. kubeadm is not able to access the host for health checks
+	d. all the required ports are open
+
+15. What would you do if you get the following `timeout` error while running `kubeadm init`? (select any two options)
+
+	a. check if kubelet is running
+	b. try creating a new master node
+	c. reinstall kubernetes
+	d. check if the swap is off
+
+16. Which of the following commands can be used to revert the changes made by `kubeadm init`?
+
+	a. kubeadm restart
+	b. kubeadm cluster revert
+	c. kubeadm remake
+	d. kubeadm reset
+
+17. What needs to be configured to use `kubectl` commands on master node after `kubeadm init` command?
+
+	a. add nodes to kubectl command
+	b. need to set KUBECONFIG for administrator
+	c. create new nodes
+	d. manually add cluster data to etcd
+
+18. What might be the reason if the nodes are not able to join a cluster using `kubeadm join` command? (select any number of choices)
+
+	a. security group hasn't been updated for allowing communication through ports.
+	b. Node aren't supposed to join the cluster
+	c. kubeadm wasn't installed properly on the worker node
+	d. control plane doesn't advertise the api-server over a public ip
+
+19. When do we get `connect: connection refused` while running `kubectl get nodes` after setting up a cluster with `kubeadm init`?
+
+	a. cluster wasn't setup successfully
+	b. you need to manually create a service for cluster
+	c. KUBECONFIG hasn't been configured properly in the environment
+	d. kubelet isn't running
+
+20. If master node doesn't require kubelet and container runtime to be installed then why do we need to install kubelet and container runtime on our master node when using `kubeadm init`?
+
+	a. kubelet is at the core of master node configuration
+	b. container runtime is required to assist with validation of API requests to kube-apiserver
+	c. By default, `kubeadm init` uses pods to deploy etcd and api-server components
+	d. kubelet is not required on the master node
+
+21. Under which namespace are the components deployed as pods in kubernetes?
+
+	a. kube-admin
+	b. kube-system
+	c. kube-adm
+	d. kubenetes-master
+
+22. What kind of a configuration needs to be implemented with regards to control group?
+
+	a. cgroups needs to be the same for container runtime and kubelet
+	b. cgroups needs to be different for container runtime and kubelet
+	c. cgroups needs to be created for container runtime
+	d. Nothing is required to be configured.
