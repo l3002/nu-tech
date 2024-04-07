@@ -36,3 +36,15 @@
   * Pulling data from remote repositories
   * Using `.gitignore`
 
+#### Ansible:
+
+  * Install Ansible on the control node
+  * Initializing Configuration files
+  * Modifying configuration files for the default user and inventories
+  * Creating Inventory
+  * Creating Groups in Inventory
+  * Configuring nodes for connectivity using `ssh-keys`.
+  * Checking Availability of hosts
+  * Using Ad Hoc Commands
+  * Creating Playbooks
+  * Copying data from control node to managed nodes
