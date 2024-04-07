@@ -30,3 +30,16 @@
   13. Push changes to the remote repository.
   14. Delete one of the branches from the repository.
 
+### Ansible Tasks:
+
+  1. Install Ansible on Control Node
+  2. Initialize configuration file for Ansible in `/etc/ansible`
+  3. Change Configuration file to Override default directory
+  4. Create 4 managed Nodes
+  5. Add an inventory in a new folder for ansible
+  6. Add managed nodes to separate groups
+  7. Setup `ssh-key` configuration for connectivity
+  8. Check connectivity to the managed nodes using ad hoc commands for groups
+  9. Reboot a certain group using ad hoc commands
+  10. Create a playbook to `ping` and run `echo` command on the managed nodes.
+  11. Create another playbook to reboot all the systems in `ungrouped` group.
