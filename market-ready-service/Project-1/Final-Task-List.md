@@ -33,7 +33,7 @@ Push main branch to the remote repository.
 
 2. Print the logged in user and move to it's `home` directory and clone a remote repository using the given link:
 
-<link>
+
 
 Now, install `python3`. Make sure you update your `apt` repository before installing them.
 
@@ -69,7 +69,10 @@ Create a new playbook with the name `ignored-playbook` and configure `git` in su
 
 After that restart the below services:
 
-- ssh
 - ufw
+- apache2
 
-Now, disable the `ssh` services.
+
+Now, disable the `apache2` services.
+
+Go to the unzipped folder and configure the inventory with nodes created above. Moreover, the modify the playbook inside it to reboot the systems in the inventory and run that playbook.
