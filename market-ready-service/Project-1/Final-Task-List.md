@@ -33,6 +33,8 @@ Push main branch to the remote repository.
 
 2. Print the logged in user and move to it's `home` directory and clone a remote repository using the given link:
 
+https://github.com/l3002/nu-tech-P1.git
+
 Now, install `python3`. Make sure you update your `apt` repository before installing them.
 
 Install `ansible` using it's documentation.
