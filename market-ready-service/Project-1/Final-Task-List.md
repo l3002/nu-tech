@@ -7,7 +7,7 @@ Go to the `Documents` directory and add two new folders with the names given bel
   * git-folder
   * ansible-folder
 
-Now, Install `git` and `cmatrix`.
+Now, Install `git` and `apache2`.
 
 After that go to the first folder and initialize `git` on it and add five empty files and two hidden file. Give them any random name.
 
@@ -57,7 +57,7 @@ Run this playbook and observe the output.
 
 3. After that initialize `git` for `ansible-folder` as well. 
 
-Commit all the changes made to them.
+Commit all the changes made to the folder using separate commits.
 
 Add a new Github repository for ansible-folder and push the main branch to it.
 
@@ -75,4 +75,9 @@ After that restart the below services:
 
 Now, disable the `apache2` services.
 
-Go to the unzipped folder and configure the inventory with nodes created above. Moreover, the modify the playbook inside it to reboot the systems in the inventory and run that playbook.
+Go to the unzipped folder and configure the inventory with nodes created above.
+
+Moreover, the modify the playbook inside it to reboot the systems in the inventory and run that playbook.
+
+Add the commits to the repository and push the main branch to remote repository.
+
