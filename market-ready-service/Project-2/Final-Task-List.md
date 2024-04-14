@@ -48,4 +48,7 @@
 
 4. Create a new Github repository and add it the repository initialized earlier.
 
-   After that using a `Personal Access Token`, push the all the commits to the remote repository. 
+   Change the commit message of the last commit and sign it off.
+
+   After that using a `Personal Access Token`, push the all the commits to the remote repository.
+
