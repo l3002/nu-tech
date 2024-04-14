@@ -19,7 +19,6 @@
   * Deleting a branch forcefully
   * Rebasing Branches in Git
   * Pushing changes to remote repository
-  * Resetting or Rollback to previous branch
 
 #### Ansible:
 
