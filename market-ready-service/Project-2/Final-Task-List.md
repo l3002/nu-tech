@@ -16,9 +16,9 @@
 
    Once done, check the logs for git and checkout into a new branch.
 
-   In the `new-branch`, add a new task to the playbook which creates a re-installs `containerd.io` and commit the changes to the file.
+   In the `new-branch`, add a new task to the playbook which re-installs `containerd` and commit the changes.
 
-   In the main, branch add a new handler to the playbook which restarts the service `containerd` and commit the changes.
+   In the main, branch add a new handler to the playbook which restarts the service `containerd` after re-installing `containerd` and commit the changes.
 
    Now, rebase the `new-branch` with respect to main and once done, check  the changes made to the playbook in `new-branch` branch.
 
@@ -30,15 +30,13 @@
 
    Check if the playbook created in step 1 is correct and then run it.
 
-   Now, Create a new playbook for creating two containers in other node using image `l3002/sshd` and expose port number `22` of both the container with port `9000` and `9001` respectively.
+   Now, Create a new playbook for creating two containers in other node using image `l3002/sshd` and expose port number `22` of both the container with port `9000` and `9001` of the host respectively.
 
    Check if the playbook created is using the correct syntax and then run it and fix any failures.
 
    `ssh` into the other server from terminal and add new users to the containers created from playbook for `ansible`.
 
-   Give these users `root` access.
-
-   Define a custom `hostname` for the other node, so that ansible control node is able to connect to it using this `hostname` 
+   Define a custom `hostname` for the other node, so that ansible control node is able to connect to it using this `hostname`
 
 3. Add the containers created in the last step to the inventory using the hostname and add them in a group named `docker-ssh`
 
