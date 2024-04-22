@@ -38,11 +38,11 @@
 
    Define a custom `hostname` for the other node, so that ansible control node is able to connect to it using this `hostname`
 
-3. Add the containers created in the last step to the inventory using the hostname and add them in a group named `docker-ssh`
+3. Add hostname to the inventory and add it to the group `docker-ssh`.
 
    Using Ad Hoc commands `ping` one of the containers.
 
-   Create a new playbook which pings both the containers and run it.
+   Now, `ping` the other container using Ad Hoc command.
 
 4. Create a new Github repository and add it the repository initialized earlier.
 
