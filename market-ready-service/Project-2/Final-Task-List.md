@@ -50,3 +50,6 @@
 
    After that using a `Personal Access Token`, push the all the commits to the remote repository.
 
+   Create a fork of the `ansible-practice repository` from `l3002` account and add a new task to the `playbook-4` for pinging both `container-1` and `container-2` and verify and run this playbook.
+
+   After that create a pull request.
