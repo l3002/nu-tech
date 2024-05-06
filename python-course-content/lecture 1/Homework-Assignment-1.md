@@ -35,18 +35,18 @@ The variable h2 has a value of 1
 
 - Use the above two variables to print the following statement as output.
 
-Expected Output:
+  - Expected Output:
 
-`<Your-friends-name> is a friend of <Your-name>`
+  `<Your-friends-name> is a friend of <Your-name>`
 
 - Modify the above command in such a way that it uses "---" in place of " " as a separator.
 
-Expected Output:
+  - Expected Output:
 
-`<Your-friends-name>---is a friend of---<Your-name>`
+  `<Your-friends-name>---is a friend of---<Your-name>`
 
 - Create two new variables, such that one contains "Hello " and the other contains "World". After that create a third variable which contains the following string:
 
-`Hello World`
+  `Hello World`
 
 > Remember you do not have to assign "Hello World" string to the third variable but use the two previously created variables to create the third one.
