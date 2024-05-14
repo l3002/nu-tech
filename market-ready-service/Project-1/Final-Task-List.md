@@ -63,7 +63,7 @@
 
    Modify the playbook to work on all the servers. Commit those changes as well and push them.
 
-   Create a new playbook with the name `ignored-playbook` and configure `git` in such a way that it ignores this playbook.
+   Create a copy playbook of `playbook-1` created in `Task-2` with the name `ignored-playbook` and configure `git` in such a way that it ignores this playbook.
 
 4. Go to the cloned repository and unzip the file added in it. 
 
@@ -76,7 +76,7 @@
 
    Go to the unzipped folder and configure the inventory with nodes created above.
 
-   Moreover, the modify the playbook inside it to reboot the systems in the inventory and run that playbook.
+   Moreover, modify the playbook inside it to reboot the systems in the inventory and run that playbook.
 
    Add the commits to the repository and push the main branch to remote repository.
 
